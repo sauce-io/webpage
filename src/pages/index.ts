@@ -1,1 +1,1 @@
-export { default as Home } from './Home/page';
+// export { default as <PAGE_NAME> } from './<PAGE_NAME>/page';

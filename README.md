@@ -1,14 +1,26 @@
-# react-setup
+# sauce-io webpage
 
-A frontend project boilerplate using [React](https://reactjs.org) :smiley:
+Marketing website for [sauce-io](https://github.com/sauce-io).
 
+Link: _none_
 
-Code linting and testing setups ___ready to go___.
+## Instructions:
 
+To run the application locally (on port **8080**)
+1) download the packages (_yarn install_ or _npm install_), then...
+2) run the command **run:dev**
 
-## Scripts:
-- **run:dev** to run the project locally (port **8080** by default)
-- **app:start** to run the project into a container (port **8080** by default)
-- **app:stop** to stop the project's container
+### To lint:
 - **lint** (apply code styling)
-- **test:all / yarn test:watch** (runs tests once / keeps tests running)
+- _PS: the lint runs automatically when a commit is made_
+
+### To run unit tests:
+- **test:all** runs tests at once 
+- **test:watch** keeps tests running
+
+### To run on Docker (on port 8080):
+- **FIRST OF ALL: install packages locally**
+- To start: **app:start**
+- To stop: **app:stop**
+
+Engineered by [react-setup](https://github.com/cl4pper/react-setup) boilerplate :smiley:
