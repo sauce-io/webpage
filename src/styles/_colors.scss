@@ -9,11 +9,11 @@ set color values as hexadecimal and rgb types
 */
 
 // main
-$color-primary: #EB5757; //rgb()
-$color-secondary: #F6F8F3; //rgb()
+$color-primary: #eb5757; //rgb()
+$color-secondary: #f6f8f3; //rgb()
 
 // support
-$color-dark: rgb(49, 49, 49); //#313131; 
+$color-dark: rgb(49, 49, 49); //#313131;
 $color-light: rgb(255, 255, 255); //#ffffff
 $color-grey-1: rgb(112, 112, 112); //#707070
 $color-grey-2: rgb(179, 179, 179); //#B3B3B3
@@ -21,9 +21,9 @@ $color-grey-3: rgb(240, 240, 240); //#EBEBEB
 $color-grey-4: rgb(251, 251, 251); //#FBFBFB
 
 // modifiers
-$color-success: #59B258; //rgb()
-$color-warning: #F2C645; //rgb()
-$color-alert: #E53631; //rgb()
+$color-success: #59b258; //rgb()
+$color-warning: #f2c645; //rgb()
+$color-alert: #e53631; //rgb()
 $color-disabled: $color-grey-2;
 
 // components

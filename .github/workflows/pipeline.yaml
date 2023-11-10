@@ -9,7 +9,7 @@ name: Default Deployment Pipeline
 # [ ] ...
 
 on:
-  pull_requests:
+  pull_request:
     branches:
       ['main', 'develop']
   push:
