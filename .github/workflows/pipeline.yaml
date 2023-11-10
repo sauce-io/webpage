@@ -1,0 +1,47 @@
+name: Default Deployment Pipeline
+
+# This workflow should run everytime a pull request is created or updated
+# and has branches 'main' or 'develop' as the target.
+
+# JOBS:
+# [x] code linting
+# [ ] runs unit tests
+# [ ] ...
+
+on:
+  pull_requests:
+    branches:
+      ['main', 'develop']
+  push:
+    branches:
+      ['main', 'develop']
+
+jobs:
+
+  continuos-integration:
+    runs-on: ubuntu-latest
+
+    stategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      # Creates an instance from our branch into Github's virtual machine
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Installs and sets up a Node version into Github's virtual machine 
+      - name: Installing Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Installing yarn
+        uses: npm install --global yarn
+
+      - name: Installing dependencies
+        run: yarn install
+
+      - name: Linting and Testing
+        run: |
+          yarn lint
