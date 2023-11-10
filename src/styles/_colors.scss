@@ -2,17 +2,29 @@
 colors should be used to store every color value used in the project
 - main colors: primary dark/light, secondary dark/light, etc.
 - support colors: dark, light, grey scale
-- components colors: shadows, transparencies, gradients
+- modifier colors: element status
+- component colors: shadows, transparencies, gradients
 
 set color values as hexadecimal and rgb types
 */
 
 // main
-$color-primary-dark: #0d47a1; // rgb(13, 72, 161)
-$color-primary-light: #42a5f5; // rgb(66, 165, 245)
-$color-ts-primary: #0d47a1; // rgb(66, 165, 245)
-$color-js-primary: #f0db4f; // rgb(240, 219, 79)
+$color-primary: #eb5757; //rgb()
+$color-secondary: #f6f8f3; //rgb()
 
 // support
-$color-dark: #313131; // rgb(49, 49, 49)
-$color-light: #ffffff; // rgb(255, 255, 255)
+$color-dark: rgb(49, 49, 49); //#313131;
+$color-light: rgb(255, 255, 255); //#ffffff
+$color-grey-1: rgb(112, 112, 112); //#707070
+$color-grey-2: rgb(179, 179, 179); //#B3B3B3
+$color-grey-3: rgb(240, 240, 240); //#EBEBEB
+$color-grey-4: rgb(251, 251, 251); //#FBFBFB
+
+// modifiers
+$color-success: #59b258; //rgb()
+$color-warning: #f2c645; //rgb()
+$color-alert: #e53631; //rgb()
+$color-disabled: $color-grey-2;
+
+// components
+$color-shadow: rgba($color-grey-1, 0.2);

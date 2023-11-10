@@ -1,1 +1,23 @@
-$size-border-radius: 4px;
+$sizes-border-radius: 4px;
+
+@function spacing($size: 'md') {
+	@if $size == 'xs' {
+		@return 2px;
+	}
+
+	@if $size == 'sm' {
+		@return 8px;
+	}
+
+	@if $size == 'md' {
+		@return 16px;
+	}
+
+	@if $size == 'lg' {
+		@return 24px;
+	}
+
+	@if $size == 'xl' {
+		@return 48px;
+	}
+}
