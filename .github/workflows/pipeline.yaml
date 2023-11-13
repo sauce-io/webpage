@@ -27,7 +27,7 @@ jobs:
     permissions:
       checks: write
       contents: write
-      pull_request: write
+      pull_requests: write
 
     steps:
       # Creates an instance from our branch into Github's virtual machine
