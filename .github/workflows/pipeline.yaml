@@ -48,7 +48,7 @@ jobs:
       - name: Linting
         uses: wearerequired/lint-action@v2
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           auto_fix: ${{ github.event_name == 'pull_request' }}
           prettier: true
 
