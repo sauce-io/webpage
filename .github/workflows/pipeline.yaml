@@ -16,10 +16,6 @@ on:
     branches:
       ['main', 'develop']
 
-permissions:
-  checks: write
-  contents: write
-
 jobs:
   continuos-integration:
     runs-on: ubuntu-latest
@@ -27,6 +23,11 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+
+    permissions:
+      checks: write
+      contents: write
+      pull_request: write
 
     steps:
       # Creates an instance from our branch into Github's virtual machine
