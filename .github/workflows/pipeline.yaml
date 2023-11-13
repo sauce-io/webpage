@@ -16,8 +16,11 @@ on:
     branches:
       ['main', 'develop']
 
-jobs:
+permissions:
+  checks: write
+  contents: write
 
+jobs:
   continuos-integration:
     runs-on: ubuntu-latest
 
@@ -42,6 +45,13 @@ jobs:
       - name: Installing dependencies
         run: yarn install
 
-      - name: Linting and Testing
-        run: |
-          yarn lint
+      - name: Linting
+        uses: wearerequired/lint-action@v2
+        with:
+          prettier: true
+
+      - name: Build
+        run: yarn build
+
+      - name: Testing
+        run: yarn test:all
