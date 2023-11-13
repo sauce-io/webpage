@@ -4,7 +4,7 @@ import React from 'react';
 import './App.scss';
 
 const App = (): JSX.Element => {
-	return <main></main>;
+  return <main></main>;
 };
 
 export default App;
