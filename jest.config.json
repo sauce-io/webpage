@@ -1,5 +1,7 @@
 {
   "testRegex": "((\\.|/*.)(test))\\.tsx?$",
+  "passWithNoTests": true,
+  "verbose": true,
   "testEnvironment": "jsdom",
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
