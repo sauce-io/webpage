@@ -17,13 +17,16 @@ on:
       ['main', 'develop']
 
 jobs:
-
   continuos-integration:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [18.x]
+
+    permissions:
+      checks: write
+      contents: write
 
     steps:
       # Creates an instance from our branch into Github's virtual machine
@@ -42,6 +45,14 @@ jobs:
       - name: Installing dependencies
         run: yarn install
 
-      - name: Linting and Testing
-        run: |
-          yarn lint
+      - name: Linting
+        uses: wearerequired/lint-action@v2
+        with:
+          auto_fix: ${{ github.event_name == 'pull_request' }}
+          prettier: true
+
+      - name: Build
+        run: yarn build
+
+      - name: Testing
+        run: yarn test:all
